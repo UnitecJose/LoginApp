@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tarea: MyString
+  prioridad: 1
+  fecha: 2015-11-15
+  descripccion: MyText
+
+two:
+  tarea: MyString
+  prioridad: 1
+  fecha: 2015-11-15
+  descripccion: MyText

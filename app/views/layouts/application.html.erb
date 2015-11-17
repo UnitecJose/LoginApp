@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <meta charset="UTF-8" />
+  <meta name="Designer" content="PremiumPixels.com">
+  <meta name="Author" content="$hekh@r d-Ziner, CSSJUNTION.com">
+  <link rel="stylesheet" type="text/css" href="/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="/css/structure.css">
+
+</head>
+<body>
+
+<% if !current_user %>
+  <%= link_to "Sign in", "/users/sign_in" %>
+<% else %>
+  <%= link_to destroy_user_session_path, :method => :delete  do %>Sign out<%end%>
+<%end%>
+
+<%= yield %>
+
+<footer id="main">
+  <a href="http://wwww.cssjunction.com">Simple Login Form (HTML5/CSS3 Coded) by CSS Junction</a> | <a href="http://www.premiumpixels.com">PSD by Premium Pixels</a>
+</footer>
+
+</body>
+</html>

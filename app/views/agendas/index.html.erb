@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1 style = "font-size: 15px; color:green"><strong>Lista de Agendas</strong></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tarea</th>
+      <th>Prioridad</th>
+      <th>Fecha</th>
+      <th>Descripccion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody style="background-color: brown; color: yellow">
+    <% @agendas.each do |agenda| %>
+      <tr>
+        <td><%= agenda.tarea %></td>
+        <td><%= agenda.prioridad %></td>
+        <td><%= agenda.fecha %></td>
+        <td><%= agenda.descripccion %></td>
+        <td><%= link_to 'Show', agenda %></td>
+        <td><%= link_to 'Edit', edit_agenda_path(agenda) %></td>
+        <td><%= link_to 'Destroy', agenda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agenda', new_agenda_path %>
